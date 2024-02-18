@@ -7,12 +7,12 @@ following_list = []
 loader = instaloader.Instaloader()
 
 try:
-	loader.login('ed.trejooo','_?&ziXpeBwaPV4N')
+	loader.login('YOUR_USERNAME','YOUR_PASSWORD')
 except TwoFactorAuthRequiredException:
 	code = input('Enter your code: ')
 	loader.two_factor_login(code)
 
-profile = instaloader.Profile.from_username(loader.context,'ed.trejooo')
+profile = instaloader.Profile.from_username(loader.context,'YOUR_USERNAME')
 
 followers = profile.get_followers()
 following = profile.get_followees()
